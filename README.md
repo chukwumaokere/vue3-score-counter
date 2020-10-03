@@ -33,3 +33,6 @@ export const variable-name so the template can access
 {{handlebars}} to access variables from your script
 
 reactive is a reactive value that inherently knows to listen for changes and make updates
+
+<style scoped> 
+makes the style only available to the specific component, not all elements/components
