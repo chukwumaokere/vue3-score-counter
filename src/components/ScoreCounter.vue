@@ -2,8 +2,8 @@
   <div>
     <h2>{{name}}</h2>
     <p> {{player.score}} </p>
-    <button @click="player.score--">Decrease</button>
-    <button @click="player.score++">Increase</button>
+    <button @click="decrease">Decrease</button>
+    <button @click="increase">Increase</button>
   </div>
 </template>
 
@@ -16,9 +16,18 @@ import { reactive } from 'vue'
     },
     inheritAttrs: false,
  }
+ 
   export const player = reactive({
     score: 0,
   });
+
+  export const increase = () => {
+     player.score += 1;
+  }
+
+  export const decrease = () => {
+      player.score -= 1;
+  }
   
 </script>
 
