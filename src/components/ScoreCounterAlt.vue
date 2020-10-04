@@ -7,19 +7,23 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { reactive } from 'vue'
-
  export default{
     props: {
         name: String,
     },
     inheritAttrs: false,
+    setup(props){
+        const player = reactive({
+            score: 0,
+        });
+        return {
+            player,
+            playerName: props.name,
+        }
+    }
  }
-  export const player = reactive({
-    score: 0,
-  });
-  
 </script>
 
 <style>

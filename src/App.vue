@@ -1,6 +1,6 @@
 <template>
   <ScoreCounter name="Lou" />
-  <ScoreCounter name="Chris" />
+  <ScoreCounter name="Christina" />
 </template>
 
 <script>
